@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { User, Folder, Briefcase, Mail } from 'lucide-react';
 import { Window } from './components/Window';
 import { Taskbar } from './components/Taskbar';
 import { DesktopIcon } from './components/DesktopIcon';
@@ -32,7 +31,7 @@ function App() {
         title: 'About Me',
         icon: <img
           src="/images/mypc.ico"
-          alt="User"
+          alt="About Me"
           className="w-4 h-4"
         />,
         component: <AboutWindow data={portfolioData} />,
@@ -40,13 +39,21 @@ function App() {
       },
       projects: {
         title: 'My Projects',
-        icon: <Folder size={16} />,
+        icon: <img
+          src="/images/folder.ico"
+          alt="My Projects"
+          className="w-4 h-4"
+        />,
         component: <ProjectsWindow projects={portfolioData.projects} />,
         position: { x: 150, y: 100 },
       },
       skills: {
-        title: 'Skills & Experience',
-        icon: <Briefcase size={16} />,
+        title: 'Experience',
+        icon: <img
+          src="/images/world.ico"
+          alt="Experience"
+          className="w-4 h-4"
+        />,
         component: (
           <SkillsWindow
             skills={portfolioData.skills}
@@ -58,7 +65,11 @@ function App() {
       },
       contact: {
         title: 'Contact',
-        icon: <Mail size={16} />,
+        icon: <img
+          src="/images/phone.ico"
+          alt="Contact"
+          className="w-4 h-4"
+        />,
         component: <ContactWindow data={portfolioData.personal} />,
         position: { x: 250, y: 140 },
       },
@@ -100,7 +111,7 @@ function App() {
           icon={
             <img
               src="/images/mypc.ico"
-              alt="User"
+              alt="About Me"
               className="w-13 h-13"
             />
           }

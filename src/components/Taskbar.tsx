@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Menu, Folder, Mail, User, Briefcase } from 'lucide-react';
 
 interface TaskbarProps {
   openWindows: Array<{ id: string; title: string; icon: React.ReactNode }>;
@@ -34,10 +33,34 @@ export const Taskbar: React.FC<TaskbarProps> = ({
   };
 
   const menuItems = [
-    { id: 'about', label: 'About Me', icon: <User size={20} /> },
-    { id: 'projects', label: 'My Projects', icon: <Folder size={20} /> },
-    { id: 'skills', label: 'Skills & Experience', icon: <Briefcase size={20} /> },
-    { id: 'contact', label: 'Contact', icon: <Mail size={20} /> },
+    {
+      id: 'about', label: 'About Me', icon: <img
+        src="/images/mypc.ico"
+        alt="About Me"
+        className="w-8 h-8"
+      />
+    },
+    {
+      id: 'projects', label: 'My Projects', icon: <img
+        src="/images/folder.ico"
+        alt="My Projects"
+        className="w-8 h-8"
+      />
+    },
+    {
+      id: 'skills', label: 'Skills & Experience', icon: <img
+        src="/images/world.ico"
+        alt="Skills"
+        className="w-8 h-8"
+      />
+    },
+    {
+      id: 'contact', label: 'Contact', icon: <img
+        src="/images/phone.ico"
+        alt="Contact"
+        className="w-8 h-8"
+      />
+    },
   ];
 
   const handleMenuItemClick = (id: string) => {
@@ -65,11 +88,10 @@ export const Taskbar: React.FC<TaskbarProps> = ({
             <button
               key={window.id}
               onClick={() => onWindowClick(window.id)}
-              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${
-                activeWindow === window.id
-                  ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
-                  : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
-              }`}
+              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${activeWindow === window.id
+                ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
+                : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
+                }`}
             >
               <div className="w-4 h-4">{window.icon}</div>
               <span className="truncate max-w-[150px]">{window.title}</span>
