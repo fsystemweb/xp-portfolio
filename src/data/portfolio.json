@@ -8,20 +8,6 @@
     "bio": "Passionate developer with 5+ years of experience building modern web applications. I love creating intuitive user interfaces and solving complex problems.",
     "avatar": "https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
-  "skills": [
-    {
-      "category": "Frontend",
-      "items": ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vue.js"]
-    },
-    {
-      "category": "Backend",
-      "items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
-    },
-    {
-      "category": "Tools",
-      "items": ["Git", "Docker", "AWS", "Figma", "VS Code"]
-    }
-  ],
   "projects": [
     {
       "id": 1,

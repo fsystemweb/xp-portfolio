@@ -4,7 +4,7 @@ import { Taskbar } from './components/Taskbar';
 import { DesktopIcon } from './components/DesktopIcon';
 import { AboutWindow } from './components/windows/AboutWindow';
 import { ProjectsWindow } from './components/windows/ProjectsWindow';
-import { SkillsWindow } from './components/windows/SkillsWindow';
+import { ExperienceWindow } from './components/windows/ExperienceWindow';
 import { ContactWindow } from './components/windows/ContactWindow';
 import portfolioData from './data/portfolio.json';
 
@@ -37,6 +37,21 @@ function App() {
         component: <AboutWindow data={portfolioData} />,
         position: { x: 100, y: 10 },
       },
+      experience: {
+        title: 'Experience & Education',
+        icon: <img
+          src="/images/world.ico"
+          alt="Experience & Education"
+          className="w-4 h-4"
+        />,
+        component: (
+          <ExperienceWindow
+            experience={portfolioData.experience}
+            education={portfolioData.education}
+          />
+        ),
+        position: { x: 200, y: 50 },
+      },
       projects: {
         title: 'My Projects',
         icon: <img
@@ -46,23 +61,7 @@ function App() {
         />,
         component: <ProjectsWindow projects={portfolioData.projects} />,
         position: { x: 150, y: 30 },
-      },
-      skills: {
-        title: 'Experience',
-        icon: <img
-          src="/images/world.ico"
-          alt="Experience"
-          className="w-4 h-4"
-        />,
-        component: (
-          <SkillsWindow
-            skills={portfolioData.skills}
-            experience={portfolioData.experience}
-            education={portfolioData.education}
-          />
-        ),
-        position: { x: 200, y: 50 },
-      },
+      },      
       contact: {
         title: 'Contact',
         icon: <img
@@ -121,6 +120,17 @@ function App() {
         <DesktopIcon
           icon={
             <img
+              src="/images/world.ico"
+              alt="Experience & Education"
+              className="w-13 h-13"
+            />
+          }
+          label="Experience & Education"
+          onClick={() => openWindow('experience')}
+        />        
+        <DesktopIcon
+          icon={
+            <img
               src="/images/folder.ico"
               alt="My Projects"
               className="w-13 h-13"
@@ -128,17 +138,6 @@ function App() {
           }
           label="My Projects"
           onClick={() => openWindow('projects')}
-        />
-        <DesktopIcon
-          icon={
-            <img
-              src="/images/world.ico"
-              alt="Skills"
-              className="w-13 h-13"
-            />
-          }
-          label="Skills"
-          onClick={() => openWindow('skills')}
         />
         <DesktopIcon
           icon={

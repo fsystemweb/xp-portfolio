@@ -41,16 +41,16 @@ export const Taskbar: React.FC<TaskbarProps> = ({
       />
     },
     {
-      id: 'projects', label: 'My Projects', icon: <img
-        src="/images/folder.ico"
-        alt="My Projects"
+      id: 'experience', label: 'Experience & Education', icon: <img
+        src="/images/world.ico"
+        alt="Experience & Education"
         className="w-8 h-8"
       />
     },
     {
-      id: 'skills', label: 'Skills & Experience', icon: <img
-        src="/images/world.ico"
-        alt="Skills"
+      id: 'projects', label: 'My Projects', icon: <img
+        src="/images/folder.ico"
+        alt="My Projects"
         className="w-8 h-8"
       />
     },
