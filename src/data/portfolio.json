@@ -1,0 +1,77 @@
+{
+  "personal": {
+    "name": "John Doe",
+    "title": "Full Stack Developer",
+    "email": "john.doe@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "bio": "Passionate developer with 5+ years of experience building modern web applications. I love creating intuitive user interfaces and solving complex problems.",
+    "avatar": "https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&w=400"
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vue.js"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
+    },
+    {
+      "category": "Tools",
+      "items": ["Git", "Docker", "AWS", "Figma", "VS Code"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-featured online shopping platform with cart management, payment integration, and admin dashboard.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "link": "https://example.com/project1"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "Collaborative task management tool with real-time updates, team workspaces, and deadline tracking.",
+      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"],
+      "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "link": "https://example.com/project2"
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "description": "Real-time weather application with interactive maps, forecasts, and location-based alerts.",
+      "technologies": ["React", "OpenWeather API", "Chart.js"],
+      "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "link": "https://example.com/project3"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Tech Corp",
+      "position": "Senior Developer",
+      "period": "2021 - Present",
+      "description": "Leading frontend development team, architecting scalable solutions, and mentoring junior developers."
+    },
+    {
+      "company": "StartUp Inc",
+      "position": "Full Stack Developer",
+      "period": "2019 - 2021",
+      "description": "Built and maintained multiple web applications, implemented CI/CD pipelines, and optimized performance."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "2015 - 2019"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/johndoe",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "twitter": "https://twitter.com/johndoe"
+  }
+}
