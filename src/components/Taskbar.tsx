@@ -113,22 +113,21 @@ export const Taskbar: React.FC<TaskbarProps> = ({
             onClick={() => setShowStartMenu(false)}
           />
           <div className="fixed bottom-10 left-0 w-80 bg-gradient-to-b from-[#4A7FEB] to-[#2D5CCC] border-2 border-[#3A6FDB] rounded-tr-lg shadow-2xl z-50">
-            <div className="flex">
-              <div className="w-12 bg-gradient-to-b from-[#3A6FDB] to-[#1F3F8A] flex items-end p-2">
-                <span className="text-white font-bold text-xs transform -rotate-90 origin-bottom-left whitespace-nowrap mb-8">
-                  Windows XP
-                </span>
+            <div className="flex flex-col">
+              {/* Header with "Windows XP" */}
+              <div className="bg-gradient-to-t from-[#3A6FDB] to-[#1F3F8A] py-6 px-4">
+                <span className="text-white font-bold text-sm">Windows XP</span>
               </div>
-              <div className="flex-1 bg-white">
+
+              {/* Menu items */}
+              <div className="bg-white">
                 {menuItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleMenuItemClick(item.id)}
-                    className="w-full px-4 py-3 flex items-center gap-3 hover:bg-[#3A6FDB] hover:text-white transition-colors text-left border-b border-gray-200"
+                    className="w-full px-4 py-3 flex items-center gap-3 hover:bg-[#759AE5] hover:text-white transition-colors text-left border-b border-gray-200"
                   >
-                    <div className="text-[#4A7FEB] hover:text-white">
-                      {item.icon}
-                    </div>
+                    <div className="text-[#4A7FEB] hover:text-white">{item.icon}</div>
                     <span className="font-semibold">{item.label}</span>
                   </button>
                 ))}
