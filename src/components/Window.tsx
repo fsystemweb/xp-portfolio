@@ -35,7 +35,7 @@ export const Window: React.FC<WindowProps> = ({
       }}
     >
       <div
-        className="bg-gradient-to-r from-[#0058E6] to-[#3A8CFF] px-2 py-1 flex items-center justify-between cursor-move select-none"
+        className="bg-gradient-to-t from-[#0058E6] to-[#3A8CFF] px-2 py-2 flex items-center justify-between cursor-move select-none"
         onMouseDown={handleMouseDown}
       >
         <div className="flex items-center gap-2">

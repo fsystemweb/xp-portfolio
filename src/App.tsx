@@ -35,7 +35,7 @@ function App() {
           className="w-4 h-4"
         />,
         component: <AboutWindow data={portfolioData} />,
-        position: { x: 100, y: 80 },
+        position: { x: 100, y: 10 },
       },
       projects: {
         title: 'My Projects',
@@ -45,7 +45,7 @@ function App() {
           className="w-4 h-4"
         />,
         component: <ProjectsWindow projects={portfolioData.projects} />,
-        position: { x: 150, y: 100 },
+        position: { x: 150, y: 30 },
       },
       skills: {
         title: 'Experience',
@@ -61,7 +61,7 @@ function App() {
             education={portfolioData.education}
           />
         ),
-        position: { x: 200, y: 120 },
+        position: { x: 200, y: 50 },
       },
       contact: {
         title: 'Contact',
@@ -71,7 +71,7 @@ function App() {
           className="w-4 h-4"
         />,
         component: <ContactWindow data={portfolioData.personal} />,
-        position: { x: 250, y: 140 },
+        position: { x: 250, y: 70 },
       },
     };
 
