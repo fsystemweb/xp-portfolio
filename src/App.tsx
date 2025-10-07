@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Window } from './components/Window';
 import { Taskbar } from './components/Taskbar';
 import { DesktopIcon } from './components/DesktopIcon';
@@ -8,6 +8,8 @@ import { ExperienceWindow } from './components/windows/ExperienceWindow';
 import { ContactWindow } from './components/windows/ContactWindow';
 import portfolioData from './data/portfolio.json';
 
+import LoadingScreen from './components/LoadingScreen';
+
 interface OpenWindow {
   id: string;
   title: string;
@@ -16,9 +18,16 @@ interface OpenWindow {
   position?: { x: number; y: number };
 }
 
+
 function App() {
   const [openWindows, setOpenWindows] = useState<OpenWindow[]>([]);
   const [activeWindow, setActiveWindow] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const openWindow = (id: string) => {
     if (openWindows.find((w) => w.id === id)) {
@@ -29,21 +38,13 @@ function App() {
     const windowConfigs: Record<string, Omit<OpenWindow, 'id'>> = {
       about: {
         title: 'About Me',
-        icon: <img
-          src="/images/mypc.ico"
-          alt="About Me"
-          className="w-4 h-4"
-        />,
-        component: <AboutWindow data={portfolioData} />,
+        icon: <img src="/images/mypc.ico" alt="About Me" className="w-4 h-4" />, 
+        component: <AboutWindow data={portfolioData} />, 
         position: { x: 100, y: 10 },
       },
       experience: {
         title: 'Experience & Education',
-        icon: <img
-          src="/images/world.ico"
-          alt="Experience & Education"
-          className="w-4 h-4"
-        />,
+        icon: <img src="/images/world.ico" alt="Experience & Education" className="w-4 h-4" />, 
         component: (
           <ExperienceWindow
             experience={portfolioData.experience}
@@ -54,22 +55,14 @@ function App() {
       },
       projects: {
         title: 'My Projects',
-        icon: <img
-          src="/images/folder.ico"
-          alt="My Projects"
-          className="w-4 h-4"
-        />,
-        component: <ProjectsWindow projects={portfolioData.projects} />,
+        icon: <img src="/images/folder.ico" alt="My Projects" className="w-4 h-4" />, 
+        component: <ProjectsWindow projects={portfolioData.projects} />, 
         position: { x: 150, y: 30 },
       },      
       contact: {
         title: 'Contact',
-        icon: <img
-          src="/images/phone.ico"
-          alt="Contact"
-          className="w-4 h-4"
-        />,
-        component: <ContactWindow data={portfolioData.personal} />,
+        icon: <img src="/images/phone.ico" alt="Contact" className="w-4 h-4" />, 
+        component: <ContactWindow data={portfolioData.personal} />, 
         position: { x: 250, y: 70 },
       },
     };
@@ -91,6 +84,10 @@ function App() {
   const handleWindowClick = (id: string) => {
     setActiveWindow(id);
   };
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <div className="min-h-screen xp-desktop relative overflow-hidden">
