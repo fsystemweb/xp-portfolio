@@ -27,11 +27,7 @@ export const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ projects }) => {
             key={project.id}
             className="bg-white rounded-lg overflow-hidden shadow-md border-2 border-[#0831D9] hover:shadow-lg transition-shadow"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
+            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h3 className="text-xl font-bold text-[#0831D9] mb-2">{project.title}</h3>
               <p className="text-gray-700 mb-3">{project.description}</p>

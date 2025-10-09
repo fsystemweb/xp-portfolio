@@ -34,32 +34,24 @@ export const Taskbar: React.FC<TaskbarProps> = ({
 
   const menuItems = [
     {
-      id: 'about', label: 'About Me', icon: <img
-        src="/images/mypc.ico"
-        alt="About Me"
-        className="w-8 h-8"
-      />
+      id: 'about',
+      label: 'About Me',
+      icon: <img src="/images/mypc.ico" alt="About Me" className="w-8 h-8" />,
     },
     {
-      id: 'experience', label: 'Experience & Education', icon: <img
-        src="/images/world.ico"
-        alt="Experience & Education"
-        className="w-8 h-8"
-      />
+      id: 'experience',
+      label: 'Experience & Education',
+      icon: <img src="/images/world.ico" alt="Experience & Education" className="w-8 h-8" />,
     },
     {
-      id: 'projects', label: 'My Projects', icon: <img
-        src="/images/folder.ico"
-        alt="My Projects"
-        className="w-8 h-8"
-      />
+      id: 'projects',
+      label: 'My Projects',
+      icon: <img src="/images/folder.ico" alt="My Projects" className="w-8 h-8" />,
     },
     {
-      id: 'contact', label: 'Contact', icon: <img
-        src="/images/phone.ico"
-        alt="Contact"
-        className="w-8 h-8"
-      />
+      id: 'contact',
+      label: 'Contact',
+      icon: <img src="/images/phone.ico" alt="Contact" className="w-8 h-8" />,
     },
   ];
 
@@ -88,10 +80,11 @@ export const Taskbar: React.FC<TaskbarProps> = ({
             <button
               key={window.id}
               onClick={() => onWindowClick(window.id)}
-              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${activeWindow === window.id
-                ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
-                : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
-                }`}
+              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${
+                activeWindow === window.id
+                  ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
+                  : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
+              }`}
             >
               <div className="w-4 h-4">{window.icon}</div>
               <span className="truncate max-w-[150px]">{window.title}</span>
@@ -100,18 +93,13 @@ export const Taskbar: React.FC<TaskbarProps> = ({
         </div>
 
         <div className="h-8 px-3 bg-[#12B0E8] hover:bg-[#1AC8FF] border border-[#0A98C8] rounded flex items-center justify-center ml-2">
-          <span className="text-white text-xs font-semibold">
-            {formatTime(currentTime)}
-          </span>
+          <span className="text-white text-xs font-semibold">{formatTime(currentTime)}</span>
         </div>
       </div>
 
       {showStartMenu && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setShowStartMenu(false)}
-          />
+          <div className="fixed inset-0 z-40" onClick={() => setShowStartMenu(false)} />
           <div className="fixed bottom-10 left-0 w-80 bg-gradient-to-b from-[#4A7FEB] to-[#2D5CCC] border-2 border-[#3A6FDB] rounded-tr-lg shadow-2xl z-50">
             <div className="flex flex-col">
               {/* Header with "Windows XP" */}
