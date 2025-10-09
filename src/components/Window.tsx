@@ -52,9 +52,7 @@ export const Window: React.FC<WindowProps> = ({
             </button>
           </div>
         </div>
-        <div className="flex-1 overflow-auto bg-[#ECE9D8] p-4">
-          {children}
-        </div>
+        <div className="flex-1 overflow-auto bg-[#ECE9D8] p-4">{children}</div>
       </div>
     );
   }
@@ -105,9 +103,7 @@ export const Window: React.FC<WindowProps> = ({
         </div>
       </div>
 
-      <div className="flex-1 overflow-auto bg-[#ECE9D8] p-4 xp-window-content">
-        {children}
-      </div>
+      <div className="flex-1 overflow-auto bg-[#ECE9D8] p-4 xp-window-content">{children}</div>
     </div>
   );
 };

@@ -53,9 +53,7 @@ export const ContactWindow: React.FC<ContactWindowProps> = ({ data }) => {
         <h3 className="text-xl font-bold text-[#0831D9] mb-4">Send a Message</h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">
-              Your Name
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
             <input
               type="text"
               value={formData.name}
@@ -65,9 +63,7 @@ export const ContactWindow: React.FC<ContactWindowProps> = ({ data }) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">
-              Your Email
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">Your Email</label>
             <input
               type="email"
               value={formData.email}
@@ -77,9 +73,7 @@ export const ContactWindow: React.FC<ContactWindowProps> = ({ data }) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">
-              Subject
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">Subject</label>
             <input
               type="text"
               value={formData.subject}
@@ -89,9 +83,7 @@ export const ContactWindow: React.FC<ContactWindowProps> = ({ data }) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-1">
-              Message
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
             <textarea
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}

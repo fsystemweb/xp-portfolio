@@ -1,0 +1,13 @@
+node_modules
+dist
+build
+/public
+*.min.*
+package-lock.json
+pnpm-lock.yaml
+.pnp
+.vscode
+.env
+.env.local
+coverage
+**/*.lock

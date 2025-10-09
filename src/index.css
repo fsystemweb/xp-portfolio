@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,12 +13,12 @@
 
 @layer components {
   .font-franklin {
-    font-family: 'Libre Franklin','Segoe UI', sans-serif;
+    font-family: 'Libre Franklin', 'Segoe UI', sans-serif;
   }
 }
 
 .xp-desktop {
-  background: linear-gradient(to bottom, #5A86C8 0%, #245EDC 100%);
+  background: linear-gradient(to bottom, #5a86c8 0%, #245edc 100%);
 }
 
 .xp-window-content::-webkit-scrollbar {
@@ -27,22 +26,22 @@
 }
 
 .xp-window-content::-webkit-scrollbar-track {
-  background: #ECE9D8;
-  border-left: 1px solid #A0A0A0;
+  background: #ece9d8;
+  border-left: 1px solid #a0a0a0;
 }
 
 .xp-window-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #DFE3EE 0%, #C8D2E6 50%, #DFE3EE 100%);
-  border: 1px solid #7B96BF;
+  background: linear-gradient(to right, #dfe3ee 0%, #c8d2e6 50%, #dfe3ee 100%);
+  border: 1px solid #7b96bf;
   border-radius: 2px;
 }
 
 .xp-window-content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to right, #C8D2E6 0%, #B0C4DE 50%, #C8D2E6 100%);
+  background: linear-gradient(to right, #c8d2e6 0%, #b0c4de 50%, #c8d2e6 100%);
 }
 
 .xp-window-content::-webkit-scrollbar-button {
-  background: linear-gradient(to bottom, #DFE3EE 0%, #C8D2E6 100%);
-  border: 1px solid #7B96BF;
+  background: linear-gradient(to bottom, #dfe3ee 0%, #c8d2e6 100%);
+  border: 1px solid #7b96bf;
   height: 16px;
 }
