@@ -1,6 +1,6 @@
 import { X, Minus, Square } from 'lucide-react';
-import { useDraggable } from '../hooks/useDraggable';
-import { useIsDesktop } from '../hooks/useIsDesktop';
+import { useDraggable } from '../hooks/use-draggable';
+import { useIsDesktop } from '../hooks/use-is-desktop';
 
 interface WindowProps {
   title: string;
