@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface DesktopIconProps {
   icon: React.ReactNode;
   label: string;
