@@ -65,4 +65,3 @@ npm run test:watch
 Test files live alongside components under `src/components/__tests__/` and follow the pattern `*.test.tsx` and `*.spec.tsx`.
 
 The test setup file is `src/setupTests.ts` which loads `@testing-library/jest-dom` for convenient matchers.
-
