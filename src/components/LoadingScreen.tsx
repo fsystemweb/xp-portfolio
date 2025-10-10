@@ -43,7 +43,12 @@ const LoadingScreen: React.FC = () => (
         <span className="font-franklin text-[#ff701d] text-3xl font-bold ml-2 mb-5">lewis</span>
       </div>
       <div className="mt-20">
-        <img src="/images/initial-loading.gif" alt="bar-loading" draggable={false} className="h-6" />
+        <img
+          src="/images/initial-loading.gif"
+          alt="bar-loading"
+          draggable={false}
+          className="h-6"
+        />
       </div>
     </div>
 
