@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface TaskbarProps {
   openWindows: Array<{ id: string; title: string; icon: React.ReactNode }>;
