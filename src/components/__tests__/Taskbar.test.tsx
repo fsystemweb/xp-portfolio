@@ -11,9 +11,7 @@ describe('Taskbar', () => {
     const onWindowClick = vi.fn();
     const onStartMenuClick = vi.fn();
 
-    const openWindows = [
-      { id: 'w1', title: 'My Window', icon: <span>ICON</span> },
-    ];
+    const openWindows = [{ id: 'w1', title: 'My Window', icon: <span>ICON</span> }];
 
     render(
       <Taskbar

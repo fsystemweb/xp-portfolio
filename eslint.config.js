@@ -14,9 +14,18 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({ baseDirectory: __dirname });
 
 export default [
-  { ignores: ['dist/', 'node_modules/', 'eslint.config.js', 'vite.config.ts', "main.tsx"] },
+  {
+    ignores: [
+      'dist/',
+      'node_modules/',
+      'eslint.config.js',
+      'vite.config.ts',
+      'vitest.config.ts',
+      'main.tsx',
+    ],
+  },
   js.configs.recommended,
-  ...tseslint.configs.recommended, 
+  ...tseslint.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -68,7 +77,7 @@ export default [
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
     },
   },
-    {
+  {
     files: ['src/main.tsx'],
     rules: {
       'unicorn/filename-case': 'off',

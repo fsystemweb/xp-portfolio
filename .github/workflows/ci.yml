@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    name: Prettier, Lint, and Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-audit --prefer-offline --no-progress
+
+      - name: Prettier check
+        run: npm run format:check
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Run unit tests
+        run: npm run test -- --run
