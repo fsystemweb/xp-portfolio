@@ -16,9 +16,32 @@ npm run format
 npm run format:check
 ```
 
-Prettier configuration is stored in `.prettierrc`. Recommended editor settings:
+Prettier configuration is stored in `.prettierrc`.
 
-- Enable "Format on Save".
-- Use the workspace Prettier installation (do not use a globally installed Prettier).
+## Linting (ESLint)
 
-If you use ESLint with an editor integration, make sure `eslint-config-prettier` is installed and configured so ESLint won't conflict with Prettier.
+This project uses ESLint for linting and code quality.
+
+- Check the repository for linting issues:
+
+```
+npm run lint
+```
+
+- Automatically fix fixable issues:
+
+```
+npm run lint:fix
+```
+
+## Install
+
+```
+npm install
+```
+
+## Start locally
+
+```
+npm run dev
+```
