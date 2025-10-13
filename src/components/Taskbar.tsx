@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 interface TaskbarDataProps {
-
   fullname: string;
-
 }
-
 
 interface TaskbarProps {
   data: TaskbarDataProps;
@@ -89,10 +86,11 @@ export const Taskbar: React.FC<TaskbarProps> = ({
             <button
               key={window.id}
               onClick={() => onWindowClick(window.id)}
-              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${activeWindow === window.id
-                ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
-                : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
-                }`}
+              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${
+                activeWindow === window.id
+                  ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
+                  : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
+              }`}
             >
               <div className="w-4 h-4">{window.icon}</div>
               <span className="truncate max-w-[150px]">{window.title}</span>

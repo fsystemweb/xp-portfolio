@@ -51,7 +51,8 @@ export const Window: React.FC<WindowProps> = ({
   return (
     <div
       ref={dragRef}
-      className={`absolute w-1/2 h-[75vh] max-w-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`} style={{
+      className={`absolute w-1/2 h-[75vh] max-w-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`}
+      style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.3)',

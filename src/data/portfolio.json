@@ -34,14 +34,7 @@
       "id": 2,
       "title": "Celonis - Process Mining Platform",
       "description": "Contributed to the development of the first version of Process Sphere, an innovative canvas application for Celonis.",
-      "technologies": [
-        "Angular",
-        "Ngrx",
-        "Canvas",
-        "Micro Frontend",
-        "Jest",
-        "Nx"
-      ],
+      "technologies": ["Angular", "Ngrx", "Canvas", "Micro Frontend", "Jest", "Nx"],
       "image": "process-sphere.png",
       "link": "https://www.youtube.com/watch?v=hyO_8iuuQwA&t=94s"
     },
@@ -49,14 +42,7 @@
       "id": 3,
       "title": "Camera Streaming App",
       "description": "Stream multiple IPTV channels smoothly, use your camera while streaming, take screenshots, and add new channels easily.",
-      "technologies": [
-        "Angular",
-        "TailwindCSS",
-        "RxJS",
-        "TypeScript",
-        "WebRTC",
-        "Jest"
-      ],
+      "technologies": ["Angular", "TailwindCSS", "RxJS", "TypeScript", "WebRTC", "Jest"],
       "image": "cameras-stream.png",
       "link": "https://fsystemweb.github.io/cameras-stream/"
     },
@@ -64,14 +50,7 @@
       "id": 4,
       "title": "CRM Dashboard",
       "description": "A dashboard for CRM applications with customer management and analytics features.",
-      "technologies": [
-        "Angular",
-        "Nx",
-        "Ngrx",
-        "Jest",
-        "Tailwind",
-        "Render"
-      ],
+      "technologies": ["Angular", "Nx", "Ngrx", "Jest", "Tailwind", "Render"],
       "image": "crm-dashboard.png",
       "link": "https://crm-dashboard-sigma.vercel.app/customers"
     }

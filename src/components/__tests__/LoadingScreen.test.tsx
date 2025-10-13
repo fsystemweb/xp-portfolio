@@ -13,7 +13,6 @@ vi.mock('../../data/portfolio.json', () => ({
   },
 }));
 
-
 describe('LoadingScreen', () => {
   it('renders logo, names, and loading bar', () => {
     render(<LoadingScreen />);

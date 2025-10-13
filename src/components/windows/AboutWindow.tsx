@@ -23,7 +23,7 @@ export const AboutWindow: React.FC<AboutWindowProps> = ({ data }) => {
       <div className="bg-white rounded-lg p-6 shadow-md border-2 border-[#0831D9]">
         <div className="flex flex-col md:flex-row gap-6">
           <img
-            src={"images/"+data.personal.avatar}
+            src={'images/' + data.personal.avatar}
             alt={data.personal.fullname}
             className="w-32 h-32 rounded-lg object-cover border-4 border-[#3A8CFF]"
           />
