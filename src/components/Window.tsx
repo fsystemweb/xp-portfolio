@@ -9,8 +9,6 @@ interface WindowProps {
   onClose: () => void;
   onMinimize?: () => void;
   initialPosition?: { x: number; y: number };
-  width?: string;
-  height?: string;
 }
 
 export const Window: React.FC<WindowProps> = ({
@@ -20,8 +18,6 @@ export const Window: React.FC<WindowProps> = ({
   onClose,
   onMinimize,
   initialPosition = { x: 100, y: 100 },
-  width = 'w-[90vw]',
-  height = 'h-[80vh]',
 }) => {
   const isDesktop = useIsDesktop(1024);
 
@@ -54,12 +50,10 @@ export const Window: React.FC<WindowProps> = ({
     );
   }
 
-  // Desktop: draggable window
   return (
     <div
       ref={dragRef}
-      className={`absolute ${width} ${height} min-h-[500px] max-w-full max-h-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`}
-      style={{
+      className={`absolute w-3/4 h-[75vh] max-w-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`} style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.3)',

@@ -2,7 +2,7 @@ interface Experience {
   company: string;
   position: string;
   period: string;
-  description: string;
+  description?: string;
 }
 
 interface Education {
