@@ -1,63 +1,133 @@
 {
+  "loadingScreen": {
+    "name": "Facundo",
+    "lastname": "Cappella"
+  },
   "personal": {
-    "name": "John Doe",
-    "title": "Full Stack Developer",
-    "email": "john.doe@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "San Francisco, CA",
-    "bio": "Passionate developer with 5+ years of experience building modern web applications. I love creating intuitive user interfaces and solving complex problems.",
-    "avatar": "https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&w=400"
+    "fullname": "Facundo Cappella",
+    "title": "Technical Lead | AI Engineer",
+    "email": "facu.cappella@gmail.com",
+    "location": "Madrid, Spain",
+    "bio": "Passionate about turning ideas into impactful web applications. Experienced in leading teams, designing scalable architectures, and building AI-driven solutions.",
+    "avatar": "profile.png"
   },
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
-      "description": "A full-featured online shopping platform with cart management, payment integration, and admin dashboard.",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
-      "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "link": "https://example.com/project1"
+      "title": "RAG Solutions - Agent Platform",
+      "description": "A Retrieval-Augmented Generation (RAG) platform leveraging LLMs to answer questions from your documents, powered by React, FastAPI, and LangChain.",
+      "technologies": [
+        "React",
+        "FastAPI",
+        "Python",
+        "LlamaIndex",
+        "LangChain",
+        "Stripe",
+        "Docker",
+        "Supabase",
+        "NebiusAPI"
+      ],
+      "image": "rag-solutions.png",
+      "link": "https://www.rag-solutions.online/"
     },
     {
       "id": 2,
-      "title": "Task Management App",
-      "description": "Collaborative task management tool with real-time updates, team workspaces, and deadline tracking.",
-      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"],
-      "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "link": "https://example.com/project2"
+      "title": "Celonis - Process Mining Platform",
+      "description": "Contributed to the development of the first version of Process Sphere, an innovative canvas application for Celonis.",
+      "technologies": ["Angular", "Ngrx", "Canvas", "Micro Frontend", "Jest", "Nx"],
+      "image": "process-sphere.png",
+      "link": "https://www.youtube.com/watch?v=hyO_8iuuQwA&t=94s"
     },
     {
       "id": 3,
-      "title": "Weather Dashboard",
-      "description": "Real-time weather application with interactive maps, forecasts, and location-based alerts.",
-      "technologies": ["React", "OpenWeather API", "Chart.js"],
-      "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "link": "https://example.com/project3"
+      "title": "Camera Streaming App",
+      "description": "Stream multiple IPTV channels smoothly, use your camera while streaming, take screenshots, and add new channels easily.",
+      "technologies": ["Angular", "TailwindCSS", "RxJS", "TypeScript", "WebRTC", "Jest"],
+      "image": "cameras-stream.png",
+      "link": "https://fsystemweb.github.io/cameras-stream/"
+    },
+    {
+      "id": 4,
+      "title": "CRM Dashboard",
+      "description": "A dashboard for CRM applications with customer management and analytics features.",
+      "technologies": ["Angular", "Nx", "Ngrx", "Jest", "Tailwind", "Render"],
+      "image": "crm-dashboard.png",
+      "link": "https://crm-dashboard-sigma.vercel.app/customers"
     }
   ],
   "experience": [
     {
-      "company": "Tech Corp",
-      "position": "Senior Developer",
-      "period": "2021 - Present",
-      "description": "Leading frontend development team, architecting scalable solutions, and mentoring junior developers."
+      "company": "Freelancer",
+      "position": "Tech Lead | Solution Architect",
+      "period": "May 2025 - Present"
     },
     {
-      "company": "StartUp Inc",
-      "position": "Full Stack Developer",
-      "period": "2019 - 2021",
-      "description": "Built and maintained multiple web applications, implemented CI/CD pipelines, and optimized performance."
+      "company": "Intrum",
+      "position": "Technical Lead Developer",
+      "period": "Dec. 2022 - May 2025"
+    },
+    {
+      "company": "Celonis",
+      "position": "Senior Software Engineer",
+      "period": "Mar. 2022 - Dec. 2022"
+    },
+    {
+      "company": "Cognizant (Project: Ford eCommerce)",
+      "position": "Senior Software Engineer",
+      "period": "Dec. 2020 - Mar. 2022"
+    },
+    {
+      "company": "Duonet (Project: Santander Bank)",
+      "position": "Senior Software Engineer",
+      "period": "Feb. 2020 - Dec. 2020"
+    },
+    {
+      "company": "Quality Compusoft",
+      "position": "Front End Lead Developer",
+      "period": "Oct. 2019 - Feb. 2020"
+    },
+    {
+      "company": "Resolvit International (Project: SAS Institute)",
+      "position": "Software Engineer",
+      "period": "Mar. 2019 - Oct. 2019"
+    },
+    {
+      "company": "GLM",
+      "position": "Software Analyst",
+      "period": "Apr. 2017 - Mar. 2019"
+    },
+    {
+      "company": "Terminal 6",
+      "position": "Software Engineer",
+      "period": "Jan. 2016 - Apr. 2017"
+    },
+    {
+      "company": "Accenture",
+      "position": "Software Engineer",
+      "period": "Apr. 2014 - Jan. 2016"
     }
   ],
   "education": [
     {
-      "institution": "University of Technology",
-      "degree": "Bachelor of Science in Computer Science",
-      "period": "2015 - 2019"
+      "institution": "International University of Valencia (VIU)",
+      "degree": "Master of Artificial Intelligence",
+      "period": "2024 - 2025"
+    },
+    {
+      "institution": "Universidad del Centro Latinoamericano (UCEL)",
+      "degree": "Bachelor of Computer Science",
+      "period": "2016 - 2019"
+    },
+    {
+      "institution": "Universidad Tecnológica Nacional (UTN)",
+      "degree": "Associate of Computer Science",
+      "period": "2009 - 2015"
     }
   ],
   "social": {
-    "github": "https://github.com/johndoe",
-    "linkedin": "https://linkedin.com/in/johndoe",
-    "twitter": "https://twitter.com/johndoe"
+    "github": "https://github.com/fsystemweb",
+    "linkedin": "https://linkedin.com/in/facundo-ezequiel-diaz/",
+    "email": "facu.cappella@gmail.com",
+    "location": "Madrid, Spain"
   }
 }

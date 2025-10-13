@@ -24,7 +24,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 5000);
+    const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +39,7 @@ function App() {
         title: 'About Me',
         icon: <img src="/images/mypc.ico" alt="About Me" className="w-4 h-4" />,
         component: <AboutWindow data={portfolioData} />,
-        position: { x: 100, y: 10 },
+        position: { x: 100, y: 5 },
       },
       experience: {
         title: 'Experience & Education',
@@ -50,19 +50,19 @@ function App() {
             education={portfolioData.education}
           />
         ),
-        position: { x: 200, y: 50 },
+        position: { x: 200, y: 20 },
       },
       projects: {
         title: 'My Projects',
         icon: <img src="/images/folder.ico" alt="My Projects" className="w-4 h-4" />,
         component: <ProjectsWindow projects={portfolioData.projects} />,
-        position: { x: 150, y: 30 },
+        position: { x: 300, y: 35 },
       },
       contact: {
         title: 'Contact',
         icon: <img src="/images/phone.ico" alt="Contact" className="w-4 h-4" />,
         component: <ContactWindow data={portfolioData.personal} />,
-        position: { x: 250, y: 70 },
+        position: { x: 400, y: 55 },
       },
     };
 
@@ -136,8 +136,6 @@ function App() {
               icon={window.icon}
               onClose={() => closeWindow(window.id)}
               initialPosition={window.position}
-              width="w-full md:w-[700px] lg:w-[800px]"
-              height="h-[calc(100vh-150px)] md:h-[600px]"
             >
               {window.component}
             </Window>
@@ -150,6 +148,7 @@ function App() {
         activeWindow={activeWindow}
         onWindowClick={handleWindowClick}
         onStartMenuClick={openWindow}
+        data={portfolioData.personal}
       />
     </div>
   );
