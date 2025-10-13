@@ -1,4 +1,4 @@
-import { X, Minus, Square } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useDraggable } from '../hooks/use-draggable';
 import { useIsDesktop } from '../hooks/use-is-desktop';
 
@@ -7,7 +7,6 @@ interface WindowProps {
   children: React.ReactNode;
   icon?: React.ReactNode;
   onClose: () => void;
-  onMinimize?: () => void;
   initialPosition?: { x: number; y: number };
 }
 
@@ -16,7 +15,6 @@ export const Window: React.FC<WindowProps> = ({
   children,
   icon,
   onClose,
-  onMinimize,
   initialPosition = { x: 100, y: 100 },
 }) => {
   const isDesktop = useIsDesktop(1024);
@@ -53,7 +51,7 @@ export const Window: React.FC<WindowProps> = ({
   return (
     <div
       ref={dragRef}
-      className={`absolute w-3/4 h-[75vh] max-w-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`} style={{
+      className={`absolute w-1/2 h-[75vh] max-w-full bg-white border-2 border-[#0831D9] rounded-lg shadow-2xl overflow-hidden flex flex-col`} style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.3)',
@@ -68,22 +66,6 @@ export const Window: React.FC<WindowProps> = ({
           <span className="text-white text-sm font-bold">{title}</span>
         </div>
         <div className="flex gap-1">
-          {onMinimize && (
-            <button
-              onClick={onMinimize}
-              className="w-6 h-5 bg-[#2B6FDB] hover:bg-[#4A8EFF] flex items-center justify-center border border-[#0831D9] rounded-sm"
-              aria-label="Minimize"
-            >
-              <Minus size={12} className="text-white" />
-            </button>
-          )}
-          <button
-            className="w-6 h-5 bg-[#2B6FDB] hover:bg-[#4A8EFF] flex items-center justify-center border border-[#0831D9] rounded-sm"
-            aria-label="Maximize"
-            disabled
-          >
-            <Square size={10} className="text-white" />
-          </button>
           <button
             onClick={onClose}
             className="w-6 h-5 bg-[#E81123] hover:bg-[#FF2D3F] flex items-center justify-center border border-[#B00000] rounded-sm"

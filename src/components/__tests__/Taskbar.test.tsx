@@ -13,12 +13,17 @@ describe('Taskbar', () => {
 
     const openWindows = [{ id: 'w1', title: 'My Window', icon: <span>ICON</span> }];
 
+    const mockData = {
+      fullname: 'John Doe',
+    };
+
     render(
       <Taskbar
         openWindows={openWindows}
         activeWindow={'w1'}
         onWindowClick={onWindowClick}
         onStartMenuClick={onStartMenuClick}
+        data={mockData}
       />
     );
 
@@ -32,7 +37,7 @@ describe('Taskbar', () => {
 
     // open start menu
     await user.click(screen.getByRole('button', { name: /start/i }));
-    expect(screen.getByText('Windows XP')).toBeInTheDocument();
+    expect(screen.getByText('John Doe')).toBeInTheDocument();
 
     // click About Me menu item
     await user.click(screen.getByText('About Me'));

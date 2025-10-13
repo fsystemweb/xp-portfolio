@@ -148,6 +148,7 @@ function App() {
         activeWindow={activeWindow}
         onWindowClick={handleWindowClick}
         onStartMenuClick={openWindow}
+        data={portfolioData.personal}
       />
     </div>
   );

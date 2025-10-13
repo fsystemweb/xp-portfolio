@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
+interface TaskbarDataProps {
+
+  fullname: string;
+
+}
+
+
 interface TaskbarProps {
+  data: TaskbarDataProps;
   openWindows: Array<{ id: string; title: string; icon: React.ReactNode }>;
   activeWindow: string | null;
   onWindowClick: (id: string) => void;
@@ -8,6 +16,7 @@ interface TaskbarProps {
 }
 
 export const Taskbar: React.FC<TaskbarProps> = ({
+  data,
   openWindows,
   activeWindow,
   onWindowClick,
@@ -80,11 +89,10 @@ export const Taskbar: React.FC<TaskbarProps> = ({
             <button
               key={window.id}
               onClick={() => onWindowClick(window.id)}
-              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${
-                activeWindow === window.id
-                  ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
-                  : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
-              }`}
+              className={`h-8 px-3 rounded flex items-center gap-2 text-sm border transition-colors ${activeWindow === window.id
+                ? 'bg-[#3A6FDB] border-[#5A8FFF] text-white'
+                : 'bg-[#2D5CCC] border-[#4A7FEB] text-white hover:bg-[#3A6FDB]'
+                }`}
             >
               <div className="w-4 h-4">{window.icon}</div>
               <span className="truncate max-w-[150px]">{window.title}</span>
@@ -102,12 +110,10 @@ export const Taskbar: React.FC<TaskbarProps> = ({
           <div className="fixed inset-0 z-40" onClick={() => setShowStartMenu(false)} />
           <div className="fixed bottom-10 left-0 w-80 bg-gradient-to-b from-[#4A7FEB] to-[#2D5CCC] border-2 border-[#3A6FDB] rounded-tr-lg shadow-2xl z-50">
             <div className="flex flex-col">
-              {/* Header with "Windows XP" */}
               <div className="bg-gradient-to-t from-[#3A6FDB] to-[#1F3F8A] py-6 px-4">
-                <span className="text-white font-bold text-sm">Windows XP</span>
+                <span className="text-white font-bold text-sm">{data.fullname}</span>
               </div>
 
-              {/* Menu items */}
               <div className="bg-white">
                 {menuItems.map((item) => (
                   <button
