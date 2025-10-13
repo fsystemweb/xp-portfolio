@@ -20,21 +20,18 @@ export const Window: React.FC<WindowProps> = ({
   onClose,
   onMinimize,
   initialPosition = { x: 100, y: 100 },
-  width = 'w-[600px]',
-  height = 'h-[500px]',
+  width = 'w-[90vw]',
+  height = 'h-[80vh]',
 }) => {
   const isDesktop = useIsDesktop(1024);
 
-  // ✅ ALWAYS call useDraggable — even on mobile
   const { position, dragRef, handleMouseDown } = useDraggable(initialPosition);
 
-  // While detecting, avoid rendering (optional)
   if (isDesktop === null) {
     return null;
   }
 
   if (!isDesktop) {
-    // Mobile: full-screen modal (non-draggable)
     return (
       <div className="fixed inset-0 z-50 bg-white border-2 border-[#0831D9] flex flex-col">
         <div className="bg-gradient-to-t from-[#0058E6] to-[#3A8CFF] px-2 py-2 flex items-center justify-between select-none">

@@ -1,10 +1,9 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 
 interface ContactWindowProps {
   data: {
     email: string;
-    phone: string;
     location: string;
   };
 }
@@ -37,10 +36,6 @@ export const ContactWindow: React.FC<ContactWindowProps> = ({ data }) => {
             <a href={`mailto:${data.email}`} className="hover:underline">
               {data.email}
             </a>
-          </div>
-          <div className="flex items-center gap-3 text-gray-700">
-            <Phone className="text-[#3A8CFF]" size={20} />
-            <span>{data.phone}</span>
           </div>
           <div className="flex items-center gap-3 text-gray-700">
             <MapPin className="text-[#3A8CFF]" size={20} />
