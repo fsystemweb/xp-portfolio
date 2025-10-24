@@ -48,12 +48,7 @@ const LoadingScreen: React.FC = () => (
         </span>
       </div>
       <div className="mt-20">
-        <img
-          src="images/initial-loading.gif"
-          alt="bar-loading"
-          draggable={false}
-          className="h-6"
-        />
+        <img src="images/initial-loading.gif" alt="bar-loading" draggable={false} className="h-6" />
       </div>
     </div>
 
