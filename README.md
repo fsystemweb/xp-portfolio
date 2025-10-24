@@ -7,7 +7,7 @@
 ![Lucide React](https://img.shields.io/badge/Lucide_React-000000?style=for-the-badge&logo=react&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
+![Prettier](https://img.shields.io/badge/Prettier-ffc0cb?style=for-the-badge&logo=prettier&logoColor=black)
 
 A free-to-use, nostalgic portfolio template inspired by popular operating systems. Designed with a retro aesthetic reminiscent of beloved vintage OS interfaces, this template offers a fun and unique way to showcase your work—perfect for developers, designers, or anyone who appreciates a touch of digital nostalgia.
 
