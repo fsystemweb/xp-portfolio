@@ -22,6 +22,8 @@ To customize this portfolio with your own information, simply edit the `portfoli
 
 Once you've made your changes, build and deploy the site as usual.
 
+> 💡 **Note:** More UI enhancements and features are planned for future updates—stay tuned!
+
 ## Install
 
 ```
