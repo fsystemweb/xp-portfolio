@@ -1,3 +1,4 @@
+import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
 
 interface ContactWindowProps {
