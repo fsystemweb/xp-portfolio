@@ -1,18 +1,20 @@
 import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import React from 'react'; 
+import React from 'react';
 import { ProjectsWindow } from '../windows/ProjectsWindow';
-
 
 // Mock the imported icons
 vi.mock('lucide-react', async () => {
   const actual = await vi.importActual('lucide-react');
   return {
     ...(actual as Record<string, any>),
-    ExternalLink: ({ size = 16 }: { size?: number }) => <span data-testid="external-link-icon" style={{ width: size, height: size }}>mock-external-link</span>,
+    ExternalLink: ({ size = 16 }: { size?: number }) => (
+      <span data-testid="external-link-icon" style={{ width: size, height: size }}>
+        mock-external-link
+      </span>
+    ),
   };
 });
-
 
 describe('ProjectsWindow', () => {
   const mockProjects = [
@@ -48,25 +50,31 @@ describe('ProjectsWindow', () => {
     expect(screen.getByText(mockProjects[0].title)).toBeInTheDocument();
     expect(screen.getByText(mockProjects[0].description)).toBeInTheDocument();
     expect(screen.getByAltText(mockProjects[0].title)).toBeInTheDocument();
-    expect(screen.getByAltText(mockProjects[0].title)).toHaveAttribute('src', 'images/' + mockProjects[0].image);
+    expect(screen.getByAltText(mockProjects[0].title)).toHaveAttribute(
+      'src',
+      'images/' + mockProjects[0].image
+    );
 
     // Check for second project
     expect(screen.getByText(mockProjects[1].title)).toBeInTheDocument();
     expect(screen.getByText(mockProjects[1].description)).toBeInTheDocument();
     expect(screen.getByAltText(mockProjects[1].title)).toBeInTheDocument();
-    expect(screen.getByAltText(mockProjects[1].title)).toHaveAttribute('src', 'images/' + mockProjects[1].image);
+    expect(screen.getByAltText(mockProjects[1].title)).toHaveAttribute(
+      'src',
+      'images/' + mockProjects[1].image
+    );
   });
 
   it('renders project technologies correctly', () => {
     render(<ProjectsWindow projects={mockProjects} />);
 
     // Check technologies for first project
-    mockProjects[0].technologies.forEach(tech => {
+    mockProjects[0].technologies.forEach((tech) => {
       expect(screen.getByText(tech)).toBeInTheDocument();
     });
 
     // Check technologies for second project
-    mockProjects[1].technologies.forEach(tech => {
+    mockProjects[1].technologies.forEach((tech) => {
       expect(screen.getByText(tech)).toBeInTheDocument();
     });
   });
@@ -76,7 +84,7 @@ describe('ProjectsWindow', () => {
 
     // Get all links with "View Project" text
     const projectLinks = screen.getAllByRole('link', { name: /View Project/ });
-    
+
     // Verify that we have the expected number of links
     expect(projectLinks).toHaveLength(mockProjects.length);
 

@@ -8,11 +8,18 @@ vi.mock('lucide-react', async () => {
   const actual = await vi.importActual('lucide-react');
   return {
     ...(actual as Record<string, any>),
-    Mail: ({ size = 20 }: { size?: number }) => <span data-testid="mail-icon" style={{ width: size, height: size }}>mock-mail</span>,
-    MapPin: ({ size = 20 }: { size?: number }) => <span data-testid="map-pin-icon" style={{ width: size, height: size }}>mock-map-pin</span>,
+    Mail: ({ size = 20 }: { size?: number }) => (
+      <span data-testid="mail-icon" style={{ width: size, height: size }}>
+        mock-mail
+      </span>
+    ),
+    MapPin: ({ size = 20 }: { size?: number }) => (
+      <span data-testid="map-pin-icon" style={{ width: size, height: size }}>
+        mock-map-pin
+      </span>
+    ),
   };
 });
-
 
 describe('ContactWindow', () => {
   const mockData = {
@@ -24,7 +31,9 @@ describe('ContactWindow', () => {
     render(<ContactWindow data={mockData} />);
 
     expect(screen.getByText('Get In Touch')).toBeInTheDocument();
-    expect(screen.getByText('Feel free to reach out for collaborations or inquiries')).toBeInTheDocument();
+    expect(
+      screen.getByText('Feel free to reach out for collaborations or inquiries')
+    ).toBeInTheDocument();
   });
 
   it('renders contact information correctly', () => {

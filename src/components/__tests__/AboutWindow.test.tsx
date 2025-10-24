@@ -8,8 +8,16 @@ vi.mock('lucide-react', async () => {
   const actual = await vi.importActual('lucide-react');
   return {
     ...(actual as Record<string, any>),
-    Github: ({ size = 20 }: { size?: number }) => <span data-testid="github-icon" style={{ width: size, height: size }}>mock-github</span>,
-    Linkedin: ({ size = 20 }: { size?: number }) => <span data-testid="linkedin-icon" style={{ width: size, height: size }}>mock-linkedin</span>,
+    Github: ({ size = 20 }: { size?: number }) => (
+      <span data-testid="github-icon" style={{ width: size, height: size }}>
+        mock-github
+      </span>
+    ),
+    Linkedin: ({ size = 20 }: { size?: number }) => (
+      <span data-testid="linkedin-icon" style={{ width: size, height: size }}>
+        mock-linkedin
+      </span>
+    ),
   };
 });
 
@@ -36,7 +44,10 @@ describe('AboutWindow', () => {
     expect(screen.getByText(mockData.personal.title)).toBeInTheDocument();
     expect(screen.getByText(mockData.personal.bio)).toBeInTheDocument();
     expect(screen.getByAltText(mockData.personal.fullname)).toBeInTheDocument();
-    expect(screen.getByAltText(mockData.personal.fullname)).toHaveAttribute('src', 'images/' + mockData.personal.avatar);
+    expect(screen.getByAltText(mockData.personal.fullname)).toHaveAttribute(
+      'src',
+      'images/' + mockData.personal.avatar
+    );
   });
 
   it('renders contact information correctly', () => {
