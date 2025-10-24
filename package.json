@@ -14,7 +14,9 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "deploy": "npm run build",
+    "deploy:local": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",

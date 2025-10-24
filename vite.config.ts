@@ -8,6 +8,7 @@ interface TestConfig extends UserConfig {
 }
 
 export default defineConfig({
+  base: '/xp-portfolio/',
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
