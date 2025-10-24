@@ -1,12 +1,5 @@
 ## Retro Portfolio Website
 
-A free-to-use, nostalgic portfolio template inspired by popular operating systems. Designed with a retro aesthetic reminiscent of beloved vintage OS interfaces, this template offers a fun and unique way to showcase your work—perfect for developers, designers, or anyone who appreciates a touch of digital nostalgia.
-
-🔗 **Live Demo:** [https://fsystemweb.github.io/xp-portfolio/](https://fsystemweb.github.io/xp-portfolio/)
-
-✅ Free for personal and non-commercial use  
-⚠️ Note: I do not own the icons or images included—these are used for demonstration only. Please do not use them commercially without proper rights.
-
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -15,6 +8,13 @@ A free-to-use, nostalgic portfolio template inspired by popular operating system
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
+
+A free-to-use, nostalgic portfolio template inspired by popular operating systems. Designed with a retro aesthetic reminiscent of beloved vintage OS interfaces, this template offers a fun and unique way to showcase your work—perfect for developers, designers, or anyone who appreciates a touch of digital nostalgia.
+
+🔗 **Live Demo:** [https://fsystemweb.github.io/xp-portfolio/](https://fsystemweb.github.io/xp-portfolio/)
+
+✅ Free for personal and non-commercial use  
+⚠️ Note: I do not own the icons or images included—these are used for demonstration only. Please do not use them commercially without proper rights.
 
 ## How to Use
 
