@@ -32,13 +32,13 @@ const LoadingScreen: React.FC = () => (
               rgba(80, 80, 80, 0.25) 2px,
               rgba(80, 80, 80, 0.25) 4px
             ),
-            background-image: repeating-linear-gradient(...), url("/images/noise.svg");        
+            background-image: repeating-linear-gradient(...), url("images/noise.svg");        
           }
       `}
     </style>
 
     <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999]">
-      <img src="/images/xp-loading.png" alt="Logo" className="h-[15%]" draggable={false} />
+      <img src="images/xp-loading.png" alt="Logo" className="h-[15%]" draggable={false} />
       <div className="flex items-end">
         <span className="font-franklin text-5xl font-semibold text-[#eeeeee]">
           {portfolioData.loadingScreen.name}
@@ -49,7 +49,7 @@ const LoadingScreen: React.FC = () => (
       </div>
       <div className="mt-20">
         <img
-          src="/images/initial-loading.gif"
+          src="images/initial-loading.gif"
           alt="bar-loading"
           draggable={false}
           className="h-6"

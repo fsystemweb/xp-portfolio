@@ -42,22 +42,22 @@ export const Taskbar: React.FC<TaskbarProps> = ({
     {
       id: 'about',
       label: 'About Me',
-      icon: <img src="/images/mypc.ico" alt="About Me" className="w-8 h-8" />,
+      icon: <img src="images/mypc.ico" alt="About Me" className="w-8 h-8" />,
     },
     {
       id: 'experience',
       label: 'Experience & Education',
-      icon: <img src="/images/world.ico" alt="Experience & Education" className="w-8 h-8" />,
+      icon: <img src="images/world.ico" alt="Experience & Education" className="w-8 h-8" />,
     },
     {
       id: 'projects',
       label: 'My Projects',
-      icon: <img src="/images/folder.ico" alt="My Projects" className="w-8 h-8" />,
+      icon: <img src="images/folder.ico" alt="My Projects" className="w-8 h-8" />,
     },
     {
       id: 'contact',
       label: 'Contact',
-      icon: <img src="/images/phone.ico" alt="Contact" className="w-8 h-8" />,
+      icon: <img src="images/phone.ico" alt="Contact" className="w-8 h-8" />,
     },
   ];
 
