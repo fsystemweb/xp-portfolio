@@ -37,13 +37,13 @@ function App() {
     const windowConfigs: Record<string, Omit<OpenWindow, 'id'>> = {
       about: {
         title: 'About Me',
-        icon: <img src="/images/mypc.ico" alt="About Me" className="w-4 h-4" />,
+        icon: <img src="images/mypc.ico" alt="About Me" className="w-4 h-4" />,
         component: <AboutWindow data={portfolioData} />,
         position: { x: 100, y: 5 },
       },
       experience: {
         title: 'Experience & Education',
-        icon: <img src="/images/world.ico" alt="Experience & Education" className="w-4 h-4" />,
+        icon: <img src="images/world.ico" alt="Experience & Education" className="w-4 h-4" />,
         component: (
           <ExperienceWindow
             experience={portfolioData.experience}
@@ -54,13 +54,13 @@ function App() {
       },
       projects: {
         title: 'My Projects',
-        icon: <img src="/images/folder.ico" alt="My Projects" className="w-4 h-4" />,
+        icon: <img src="images/folder.ico" alt="My Projects" className="w-4 h-4" />,
         component: <ProjectsWindow projects={portfolioData.projects} />,
         position: { x: 300, y: 35 },
       },
       contact: {
         title: 'Contact',
-        icon: <img src="/images/phone.ico" alt="Contact" className="w-4 h-4" />,
+        icon: <img src="images/phone.ico" alt="Contact" className="w-4 h-4" />,
         component: <ContactWindow data={portfolioData.personal} />,
         position: { x: 400, y: 55 },
       },
@@ -103,22 +103,22 @@ function App() {
 
       <div className="relative z-10 p-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
         <DesktopIcon
-          icon={<img src="/images/mypc.ico" alt="About Me" className="w-13 h-13" />}
+          icon={<img src="images/mypc.ico" alt="About Me" className="w-13 h-13" />}
           label="About Me"
           onClick={() => openWindow('about')}
         />
         <DesktopIcon
-          icon={<img src="/images/world.ico" alt="Experience & Education" className="w-13 h-13" />}
+          icon={<img src="images/world.ico" alt="Experience & Education" className="w-13 h-13" />}
           label="Experience & Education"
           onClick={() => openWindow('experience')}
         />
         <DesktopIcon
-          icon={<img src="/images/folder.ico" alt="My Projects" className="w-13 h-13" />}
+          icon={<img src="images/folder.ico" alt="My Projects" className="w-13 h-13" />}
           label="My Projects"
           onClick={() => openWindow('projects')}
         />
         <DesktopIcon
-          icon={<img src="/images/phone.ico" alt="Contact" className="w-13 h-13" />}
+          icon={<img src="images/phone.ico" alt="Contact" className="w-13 h-13" />}
           label="Contact"
           onClick={() => openWindow('contact')}
         />
