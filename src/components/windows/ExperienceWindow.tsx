@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface Experience {
   company: string;
   position: string;
